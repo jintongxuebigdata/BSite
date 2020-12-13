@@ -1,0 +1,93 @@
+<template>
+  <div>
+    <h2>热门</h2>
+    <div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+            </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'hot',
+  created () {
+    console.log('hot created')
+  }
+}
+</script>
+
+<style lang="less" scoped>
+
+</style>

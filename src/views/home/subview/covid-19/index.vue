@@ -1,0 +1,93 @@
+<template>
+  <div>
+    <h2>新冠病毒2019</h2>
+    <div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+            </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'covid-19',
+  created () {
+    console.log('19 created')
+  }
+}
+</script>
+
+<style lang="less" scoped>
+
+</style>

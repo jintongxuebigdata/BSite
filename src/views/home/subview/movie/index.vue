@@ -1,0 +1,93 @@
+<template>
+  <div>
+    <h2>影视</h2>
+    <div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+              <div>内容</div>
+            </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'movie',
+  created () {
+    console.log('电影 created')
+  }
+}
+</script>
+
+<style lang="less" scoped>
+
+</style>
