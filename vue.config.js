@@ -101,8 +101,8 @@ module.exports = {
           // 直接覆盖变量
           // 'text-color': '#111',
           // 'border-color': '#eee',
-          // 或者可以通过 less 文件覆盖（文件路径为绝对路径）
-          hack: 'true;@import "C:/Users/ASUS/Desktop/demo/BSite/bsite-vue/src/assets/css/common/vant-cover.less";'
+          // 或者可以通过 less 文件覆盖（文件路径为绝对路径）/Users/jinweihua/Desktop/资料/BSite/src/assets/css/common/vant-cover.less
+          hack: 'true;@import "/Users/jinweihua/Desktop/资料/BSite/src/assets/css/common/vant-cover.less";'
         }
       }
     }

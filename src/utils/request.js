@@ -1,5 +1,6 @@
 import axios from 'axios'
-// import { Toast } from 'vant'
+import router from '../router'
+import { Toast } from 'vant'
 
 const service = axios.create({
   baseURL: process.env.VUE_APP_BASE_API,
@@ -23,6 +24,14 @@ service.interceptors.request.use(
 // 响应拦截
 service.interceptors.response.use(
   response => {
+    // 接口权限校验放到响应拦截中
+    // token过期或错误
+    if (response.data.code === '4001' || response.data.code === '4002' || response.data.code === '4003') {
+      Storage.removeCookie('auth-token')
+      Storage.removeLocalStorage('user-info')
+      Toast.fail(response.data.msg)
+      router.push('/profile')
+    }
     const res = response.data
     return res
   },

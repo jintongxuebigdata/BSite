@@ -16,6 +16,11 @@
 <script>
 export default {
   name: 'layout',
+  data () {
+    return {
+      active: 0
+    }
+  },
   created () {
     console.log('layout')
   }

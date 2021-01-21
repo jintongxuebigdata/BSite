@@ -1,6 +1,6 @@
 import { login, logout } from '@/api/user.js'
 import { Toast } from 'vant'
-import $router from '@/router'
+import router from '@/router'
 
 const state = {
   token: '',
@@ -15,49 +15,36 @@ const mutations = {
   },
   DEL_TOKEN: (state) => {
     state.token = ''
+  },
+  SET_ROLES: (state, roles) => {
+    state.roles = roles
   }
 }
 
 const actions = {
+  // 登录
   async login_action ({ commit }, payload) {
-    const { code, msg, token, data } = await login(payload)
-    if (code === 4001) {
-      Storage.removeCookie('auth-token')
-      Storage.removeLocalStorage('user-info')
-      Toast.fail(msg)
-      return
-    } else if (code === 4002) {
-      Toast.fail(msg)
-      return
-    } else if (code === 2001) {
-      Toast.success(msg)
-      Storage.setLocalStorage('user-info', data)
-      $router.push({
-        path: '/redirect',
-        query: {
-          routename: 'profile'
-        }
-      })
-      return
-    }
+    const { msg, token, data } = await login(payload)
     Toast.success(msg)
     commit('SET_TOKEN', token)
+    // commit('SET_ROLES', data.roles)
     Storage.setCookie('auth-token', token, { expires: 7 })
     Storage.setLocalStorage('user-info', data)
-    $router.push({
+    router.push({
       path: '/redirect',
       query: {
         routename: 'profile'
       }
     })
   },
+  // 登出
   async logout_action ({ commit }, payload) {
     const { msg } = await logout(payload)
     Toast.success(msg)
     commit('DEL_TOKEN')
     Storage.removeCookie('auth-token')
     Storage.removeLocalStorage('user-info')
-    $router.push({
+    router.push({
       path: '/redirect',
       query: {
         routename: 'profile'

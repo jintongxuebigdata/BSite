@@ -16,3 +16,11 @@ export function logout (data) {
     params: data
   })
 }
+
+// 校验登录状态
+export function logstate (data) {
+  return request({
+    url: '/bsite/dev-api/user/logstate',
+    params: data
+  })
+}

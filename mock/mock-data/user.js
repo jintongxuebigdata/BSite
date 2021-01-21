@@ -7,19 +7,22 @@ const userList = new Map([
     username: 'bilibili2333',
     password: '666666',
     avatar: 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3556742214,4062031476&fm=26&gp=0.jpg',
-    nickname: 'bilibili'
+    nickname: 'bilibili',
+    roles: ['member']
   }],
   ['mabaoguo2333', {
     username: 'mabaoguo2333',
     password: '666666',
     avatar: 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1508383676,1310190030&fm=11&gp=0.jpg',
-    nickname: 'mabaoguo'
+    nickname: 'mabaoguo',
+    roles: ['common']
   }],
   ['paidaxing2333', {
     username: 'paidaxing2333',
     password: '666666',
     avatar: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607358928191&di=190c198ddb58d74a187ca598fad6ad4a&imgtype=0&src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201903%2F02%2F20190302150317_YTZyM.thumb.400_0.jpeg',
-    nickname: 'paidaxing'
+    nickname: 'paidaxing',
+    roles: ['visitor']
   }]
 ])
 
@@ -33,7 +36,7 @@ function initTokenExpires (token) {
 
 function checkToken (key) {
   if (!tokenInfo.get(key)) {
-    return 4003 // 首次登录
+    return 4003 // 首次登录 或 token错误
   }
   const diffTime = tokenInfo.get(key).expires - new Date().getTime()
   if (diffTime > 0) {
@@ -86,7 +89,7 @@ module.exports = {
           return res.json({
             status: 'success',
             msg: '登录成功',
-            code: 200,
+            code: 2001,
             token: token,
             data: userList.get(username)
           })
@@ -109,6 +112,25 @@ module.exports = {
         status: 'success',
         code: 200,
         msg: '已退出登录'
+      })
+    }
+  },
+
+  // 校验登录状态
+  [`GET ${BaseUrl}/logstate`]: (req, res) => {
+    const { username, token } = req.query
+    const state = tokenInfo.has(username) && tokenInfo.get(username).token === token
+    if (state) {
+      res.json({
+        status: 'success',
+        code: 2001,
+        msg: '自动登录'
+      })
+    } else {
+      res.json({
+        status: 'failed',
+        code: 4001,
+        msg: '登录已过期请重新登录'
       })
     }
   }
